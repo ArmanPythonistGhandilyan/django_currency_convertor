@@ -3,7 +3,7 @@ import requests
 
 
 def exchange(request):
-    response = requests.get(url='https://api.exchangerate-api.com/v4/latest/USD').json()   # JSON api of exchange course state 
+    response = requests.get(url='https://api.exchangerate-api.com/v4/latest/USD').json()   # JSON api of the exchange course state 
     currencies = response.get('rates')   # Dict of currencies as keys and corresponding rates as values
     
     if request.method == 'GET':
